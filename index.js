@@ -1,14 +1,16 @@
 //Essa variavel guarda todos os elementos do object e o for vare todos os elementos dendo da variavel.
 var fields = document.querySelectorAll("#form-user-create [name]");
+var user = {};
 fields.forEach(function(field, index){
     if (field.name == "gender") {
         if (field.checked) {
-            console.log("Sim", field);
+            user[field.name] = field.value;
         }
         
     } else {
-        console.log("Não");
+        user[field.name] = field.value;
     }
     
 
 });
+console.log(user);
